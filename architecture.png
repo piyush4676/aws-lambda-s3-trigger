@@ -1,0 +1,60 @@
+1️⃣ Users / Upload Source
+
+Icon: Person/User (or just a label “User”)
+
+Purpose: Shows someone uploads a file to S3.
+
+Arrow: From User → S3 Bucket
+
+2️⃣ S3 Bucket
+
+Icon: Amazon S3 (bucket symbol)
+
+Label: S3 Bucket (File Upload)
+
+Purpose: Shows where files are stored and what triggers the Lambda function.
+
+3️⃣ Lambda Function
+
+Icon: AWS Lambda
+
+Label: Lambda Function (Triggered Automatically)
+
+Arrow: From S3 Bucket → Lambda Function
+
+Purpose: Shows that Lambda is executed automatically whenever a file is uploaded.
+
+4️⃣ IAM Role
+
+Icon: IAM Role / Security Icon
+
+Label: IAM Role (S3 Access Policy)
+
+Arrow: Lambda → IAM Role
+
+Purpose: Shows that Lambda uses a role with permissions to access S3 securely.
+
+5️⃣ CloudWatch Logs (Optional)
+
+Icon: CloudWatch
+
+Label: CloudWatch Logs (Monitor Execution)
+
+Arrow: Lambda → CloudWatch
+
+Purpose: Shows where the Lambda execution logs are stored.
+
+6️⃣ Data Flow Arrows
+
+Draw arrows showing flow of events/data:
+
+User → S3 Bucket → Lambda Function → CloudWatch Logs
+                  ↑
+                  |
+                IAM Role
+
+
+The IAM Role arrow indicates permissions Lambda needs to read S3.
+
+The main arrow shows file triggers Lambda → Lambda logs the result.
+
